@@ -206,8 +206,8 @@ local function creatureSayCallback(cid, type, msg)
 				npcHandler:say("You already have been blessed!", cid)
 			elseif player:removeMoneyNpc(totalBlessPrice) then
 				npcHandler:say("You have been blessed by all of five gods!, |PLAYERNAME|.", cid)
-				for b = 1, 5 do
-					player:addBlessing(b)
+				for b = 2, 6 do
+					player:addBlessing(b,1)
 				end
 				player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
 			else
